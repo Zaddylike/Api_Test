@@ -1,0 +1,108 @@
+apiname: 先NLH後21_200_確認下注
+env: dev
+url: wss://web-pp2.pkxxz.com/ws/
+method: websocket
+headers:
+  Content-Type: "application/json"
+case:
+- params:
+    casename: 登入
+    msgId: 201
+    senddata:
+      "userName": "+852 0922"
+      "password": "aaaa1234"
+      "imei": ""
+      "model": ""
+      "channel": "德州"
+      "channelInt": 100
+      "version": 1.15.24.5
+      "jingDu": 200
+      "weiDu": 200
+      "language": 0
+      "verify": 1
+  expect:
+    - 201
+    - login success
+- params:
+    casename: 進入_21
+    msgId: 2101
+    senddata:
+      "gameType": 820
+      "roomID": 379
+  expect:
+    - 2101
+    - Success
+- params:
+    casename: 等待買入_21
+    msgId: 2102
+    senddata:
+      "gameID": ""
+      "seat": 1
+  expect:
+    - 2102
+    - Success
+- params:
+    casename: 買入送出_21
+    msgId: 2103
+    senddata: 
+      "gameID": ""
+      "amount": 100
+      "seat": 1 
+  expect:
+    - 2103
+    - Success
+- params:
+    casename: 下注_21
+    msgId: 2135
+    senddata: 
+      "gameID": ""
+      "amount": 100
+  expect:
+    - 2135
+    - Success
+- params:
+    casename: 確認下注_21
+    msgId: 2121
+    senddata: 
+      "gameID": ""
+  expect:
+    - 2121
+    - Success
+- params:
+    casename: 進入_NLH
+    msgId: 207
+    senddata:
+      "gameType": 800
+      "gameId": 0
+      "ChangeDesk": False
+      "is213Broadable": False
+      "isCoinQuick": True
+      "coinQuickLevel": 177
+  expect:
+    - 207
+    - 进入房间成功！
+- params:
+    casename: 坐下_NLH
+    msgId: 208
+    senddata:
+      "pos": 0
+  expect:
+    - 208
+    - success！
+- params:
+    casename: 買入_NLH
+    msgId: 210
+    senddata:
+      "take": 100
+      "usePlatformCoins": 1
+      "reason": "normal"
+  expect:
+    - 210
+    - 成功！
+- params:
+    casename: 站起_NLH
+    msgId: 214
+    senddata: {}
+  expect:
+    - 214
+    - 成功！

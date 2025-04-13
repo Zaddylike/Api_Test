@@ -1,0 +1,29 @@
+apiname: Login
+env: dev
+url: http://api.qosuat.com/pa/game/login
+method: post
+headers:
+  Content-Type: "application/json"
+case:
+- params:
+    casename: 正向
+    senddata:
+      "comId": "UAT"
+      "ts": "1678886400"
+      "signature": "adbb0bbb938fdc8c99a96205ce62ec12"
+      "accountName" : "qatest999"
+  expect:
+  - 200
+  - "Login successful"
+- params:
+    casename: 反向
+    senddata:
+      "pjn": "簽名認證token錯誤"
+      "comId": "UAT"
+      "ts": "1678886400"
+      "signature": "i3u4fh3iu4fhi3u4hfi3u4fhi3u4hfu4"
+      "accountName" : "qatest999"
+  expect:
+  - 200
+  - "Signature verification failed"
+

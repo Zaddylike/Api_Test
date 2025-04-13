@@ -1,0 +1,43 @@
+projectName: EnterGame
+site: dev
+url: http://api.qosuat.com/pa/game/enterGame
+method: post
+headers:
+  Content-Type: "application/json"
+case:
+- params:
+    "pjn": "參數正確"
+    "comId": "UAT"
+    "ts": "1678886400"
+    "signature": "adbb0bbb938fdc8c99a96205ce62ec12"
+    "accountName" : "qatest999"
+    "gameToken" : "dc5f8dee3cdef71dc9e171ee91601f38"
+    "gameType": 1300
+  expect:
+  - 200 #statusCode
+  - Success #assert
+- params:
+    "pjn": "gameToken錯誤"
+    "comId": "UAT"
+    "ts": "1678886400"
+    "signature": "adbb0bbb938fdc8c99a96205ce62ec12"
+    "accountName" : "qatest999"
+    "gameToken" : "3kj4fh3kj4fhk3j4fhksjefhk4j3hf4"
+    "gameType": 1300
+  expect:
+  - 200 #statusCode
+  - "Token validation failed!"
+- params:
+    "pjn": "遊戲類型錯誤"
+    "comId": "UAT"
+    "ts": "1678886400"
+    "signature": "adbb0bbb938fdc8c99a96205ce62ec12"
+    "accountName" : "qatest999"
+    "gameToken" : "dc5f8dee3cdef71dc9e171ee91601f38"
+    "gameType": 1200
+  expect:
+  - 200 #statusCode
+  - "Invalid game type: 1200"
+
+
+# case:["params:{}", expects:{}]

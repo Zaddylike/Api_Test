@@ -1,0 +1,23 @@
+測試時間,API名稱,PASS數量,FAIL數量,測試結果
+2025-04-04 17:21,.\api_case\test_case_2446_login.yaml,0,2,FAIL
+2025-04-04 17:23,.\api_case\test_case_2446_login.yaml,0,2,FAIL
+2025-04-04 17:24,.\api_case\test_case_2446_login.yaml,0,2,FAIL
+2025-04-04 17:56,.\api_case\test_case_2446_login.yaml,0,1,FAIL
+2025-04-04 17:56,.\api_case\test_case_2446_login.yaml,0,1,FAIL
+2025-04-04 17:56,.\api_case\test_case_2446_login.yaml,0,1,FAIL
+2025-04-04 17:58,.\api_case\test_case_2446_login.yaml,0,1,FAIL
+2025-04-04 17:59,.\api_case\test_case_2446_login.yaml,0,1,FAIL
+2025-04-04 17:59,.\api_case\test_case_2446_login.yaml,0,1,FAIL
+2025-04-04 18:01,.\api_case\test_case_2446_login.yaml,0,1,FAIL
+2025-04-04 18:02,.\api_case\test_case_2446_login.yaml,0,1,FAIL
+2025-04-04 18:03,.\api_case\test_case_2446_login.yaml,0,1,FAIL
+2025-04-04 18:03,.\api_case\test_case_2446_login.yaml,0,1,FAIL
+2025-04-04 18:04,.\api_case\test_case_2446_login.yaml,0,1,FAIL
+2025-04-04 18:04,.\api_case\test_case_2446_login.yaml,0,1,FAIL
+2025-04-04 18:30,.\api_case\test_case_2446_login.yaml,0,1,FAIL
+2025-04-04 18:34,.\api_case\test_case_2446_login.yaml,0,2,FAIL
+2025-04-04 19:57,.\api_case\test_case_2446_login.yaml,0,2,FAIL
+2025-04-04 20:00,.\api_case\test_case_2446_login.yaml,0,2,FAIL
+2025-04-04 20:04,.\api_case\test_case_2446_login.yaml,0,2,FAIL
+2025-04-07 10:09,.\api_case_http\test_case_2446_login.yaml,2,0,PASS
+2025-04-07 16:42,.\api_case_http\test_case_2446_login.yaml,2,0,PASS

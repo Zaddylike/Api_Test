@@ -1,0 +1,16 @@
+apiname: ""
+env: dev
+case:
+- params:
+    casename: "" 
+    url: ""
+    method: ""
+    headers:
+      Content-Type: "application/json"
+    retry: False
+    loop: 0
+    keep: ""
+    msgid: ""
+    body:
+      "example": True 
+  expect: []
